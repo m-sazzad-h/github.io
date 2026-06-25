@@ -1,594 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md Sazzad Hossain — AI Builder & Data Engineer</title>
-  <meta name="description" content="Md Sazzad Hossain — AI Builder & Data Engineer. Portfolio of a final-year CSE student, competitive programmer, and founder of Qarena.">
+  <title>Md Sazzad Hossain — AI Builder</title>
+  <meta name="description" content="Md Sazzad Hossain — AI Builder. Portfolio of a final-year CSE student, competitive programmer, and founder of Qarena.">
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #0D0F12;
-      --surface: #1A1D23;
-      --surface-hover: #21262E;
-      --accent: #3B82F6;
-      --accent-hover: #2563EB;
-      --text: #F3F4F6;
-      --text-dim: #9CA3AF;
-      --border: #2D333B;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: var(--accent-hover);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* Navbar */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(13, 15, 18, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-      padding: 1rem 0;
-    }
-
-    .navbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--text);
-    }
-
-    .logo span {
-      color: var(--accent);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text-dim);
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--text);
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    /* Hero */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 80px;
-    }
-
-    .hero-content {
-      max-width: 800px;
-    }
-
-    .hero-role {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.1rem;
-      color: var(--accent);
-      margin-bottom: 1rem;
-      min-height: 1.5em;
-    }
-
-    .hero-name {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 1rem;
-    }
-
-    .hero-tagline {
-      font-size: 1.1rem;
-      color: var(--text-dim);
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-
-    .btn {
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.2s;
-      display: inline-block;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-hover);
-      color: white;
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .stats-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .stat-item {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
-      color: var(--text-dim);
-    }
-
-    .stat-item strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    /* Section Base */
-    section {
-      padding: 5rem 0;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-subtitle {
-      color: var(--text-dim);
-      margin-bottom: 3rem;
-    }
-
-    /* About */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .about-text {
-      color: var(--text-dim);
-      line-height: 1.8;
-    }
-
-    .highlight-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: var(--border);
-    }
-
-    .card-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.35rem;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: var(--text-dim);
-      line-height: 1.6;
-    }
-
-    /* Skills */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
-
-    .skill-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-    }
-
-    .skill-card h3 {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-    }
-
-    .skill-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .skill-tag {
-      background: rgba(59, 130, 246, 0.15);
-      color: var(--accent);
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-family: 'JetBrains Mono', monospace;
-    }
-�
-    /* Projects */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: transform 0.2s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-2px);
-    }
-
-    .project-card.featured {
-      grid-column: 1 / -1;
-      border-color: var(--accent);
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.75rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .project-title {
-      font-size: 1.15rem;
-      font-weight: 600;
-    }
-
-    .status-badge {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.8rem;
-      color: #4ADE80;
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    .pulse {
-      width: 8px;
-      height: 8px;
-      background: #4ADE80;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
-      70% { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
-    }
-
-    .project-desc {
-      color: var(--text-dim);
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .project-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .project-link {
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .project-link::after {
-      content: " ->";
-    }
-
-    /* Experience */
-    .timeline {
-      position: relative;
-      padding-left: 2rem;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--border);
-    }
-
-    .timeline-item {
-      position: relative;
-      padding-bottom: 3rem;
-    }
-
-    .timeline-item:last-child {
-      padding-bottom: 0;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: -2rem;
-      top: 0.3rem;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 3px solid var(--bg);
-      margin-left: -5px;
-    }
-
-    .timeline-content h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .timeline-meta {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
-      color: var(--text-dim);
-      margin-bottom: 1rem;
-    }
-
-    .timeline-list {
-      list-style: none;
-      color: var(--text-dim);
-      font-size: 0.95rem;
-    }
-
-    .timeline-list li {
-      padding-left: 1.2rem;
-      position: relative;
-      margin-bottom: 0.5rem;
-      line-height: 1.6;
-    }
-
-    .timeline-list li::before {
-      content: ">";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-    }
-
-    /* Contact */
-    .contact-section {
-      text-align: center;
-    }
-
-    .contact-section .section-subtitle {
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .contact-link {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.25rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.9rem;
-      color: var(--text);
-      transition: border-color 0.2s;
-    }
-
-    .contact-link:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .contact-link svg {
-      width: 18px;
-      height: 18px;
-    }
-
-    /* Footer */
-    .footer {
-      padding: 2rem 0;
-      text-align: center;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer p {
-      color: var(--text-dim);
-      font-size: 0.9rem;
-    }
-
-    /* Mobile */
-    @media (max-width: 968px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .skills-grid {
-       adapt-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero-name {
-        font-size: 2.2rem;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .mobile-menu-btn {
-        display: block;
-      }
-
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-bar {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .cta-buttons {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    /* Mobile menu */
-    .mobile-nav {
-      display: none;
-      position: fixed;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem;
-      z-index: 999;
-    }
-
-    .mobile-nav.active {
-      display: block;
-    }
-
-    .mobile-nav a {
-      display: block;
-      padding: 0.75rem 0;
-      color: var(--text);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .mobile-nav a:last-child {
-      border-bottom: none;
-    }
-  </style>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar">
     <div class="container">
       <a href="#" class="logo">Sazzad<span>.</span></a>
@@ -611,11 +39,11 @@
     <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
   </div>
 
-  <!-- Hero -->
+  <!-- ==================== HERO ==================== -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-role" id="typed-role">Data Engineer</div>
+        <div class="hero-role" id="typed-role">AI Builder</div>
         <h1 class="hero-name">Md Sazzad Hossain</h1>
         <p class="hero-tagline">
           Final-year CSE student, competitive programmer, and AI builder. I turn data into systems and ideas into products — currently building Qarena, an AI-powered exam intelligence platform for Bangladesh.
@@ -625,16 +53,15 @@
           <a href="#contact" class="btn btn-outline">Get In Touch</a>
         </div>
         <div class="stats-bar">
-          <div class="stat-item"><strong>10M+</strong> Rows in ETL Pipeline</div>
-          <div class="stat-item"><strong>2×</strong> ICPC Asia Dhaka Regional</div>
-          <div class="stat-item"><strong>~8/10</strong> Qarena Prediction Accuracy</div>
-          <div class="stat-item"><strong>100+</strong> Students Instructed</div>
+            <div class="stat-item"><strong>2×</strong> ICPC Asia Dhaka Regional</div>
+            <div class="stat-item"><strong>7–8.5/10</strong> Exam Prediction Accuracy</div>
+            <div class="stat-item"><strong>100+</strong> Students Instructed</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ==================== ABOUT ==================== -->
   <section id="about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
@@ -642,7 +69,7 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I'm a final-year CSE student at IST, Dhanmondi. My work sits at the intersection of data engineering, machine learning, and product building. As President and AI/Data Science Instructor at the Programming Club of IST (pcIST), I run workshops, organize contests, and mentor students. I co-founded Qarena — an AI-powered platform that predicts exam questions for Bangladesh's National University students, validated at 7–8.5/10 accuracy against real exam papers.
+            I'm a final-year CSE student at IST, Dhanmondi. My work sits at the intersection of machine learning and product building. As President and AI Instructor at the Programming Club of IST (pcIST), I run workshops, organize contests, and mentor students. I founded Qarena — an AI-powered platform that predicts exam questions for Bangladesh's National University students, validated at 7–8.5/10 accuracy against real exam papers.
           </p>
         </div>
         <div class="highlight-cards">
@@ -654,130 +81,131 @@
           <div class="card">
             <div class="card-icon">🚀</div>
             <h3>Founder</h3>
-            <p>Co-founded Qarena — active users, real predictions, growing without paid ads.</p>
+            <p>Founded Qarena — active users, real predictions, growing without paid ads.</p>
           </div>
-          <div class="card">
-            <div class="card-icon">📊</div>
-            <h3>Data Engineer</h3>
-            <p>Built production ETL pipelines processing 10M+ rows with Airflow, dbt, Docker, and PostgreSQL.</p>
-          </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- ==================== SKILLS ==================== -->
   <section id="skills" style="background: var(--surface);">
     <div class="container">
       <h2 class="section-title">Skills</h2>
       <p class="section-subtitle">Technologies and tools I work with</p>
       <div class="skills-grid">
         <div class="skill-card">
-          <h3>Machine Learning & AI</h3>
-          <ul class="skill-list">
-            <li class="skill-tag">Python</li>
-            <li class="skill-tag">scikit-learn</li>
-            <li class="skill-tag">TensorFlow</li>
-            <li class="skill-tag">NLP</li>
-            <li class="skill-tag">LLM APIs</li>
-            <li class="skill-tag">Regression</li>
-            <li class="skill-tag">Anomaly Detection</li>
-          </ul>
+            <h3>Language & Tools</h3>
+            <ul class="skill-list">
+                <li class="skill-tag">Python</li>
+                <li class="skill-tag">C/C++</li>
+                <li class="skill-tag">SQL</li>
+                <li class="skill-tag">Git/GitHub</li>
+            </ul>
         </div>
+
         <div class="skill-card">
-          <h3>Data Engineering</h3>
-          <ul class="skill-list">
-            <li class="skill-tag">Apache Airflow</li>
-            <li class="skill-tag">dbt</li>
-            <li class="skill-tag">PostgreSQL</li>
-            <li class="skill-tag">Docker</li>
-            <li class="skill-tag">ETL Pipelines</li>
-            <li class="skill-tag">SQL</li>
-            <li class="skill-tag">Supabase</li>
-          </ul>
+            <h3>Analytics & Databases</h3>
+            <ul class="skill-list">
+                <li class="skill-tag">MySQL</li>
+                <li class="skill-tag">PostgreSQL</li>
+                <li class="skill-tag">Vector Databases</li>
+            </ul>
         </div>
+
         <div class="skill-card">
-          <h3>Backend & APIs</h3>
-          <ul class="skill-list">
-            <li class="skill-tag">FastAPI</li>
-            <li class="skill-tag">Flask</li>
-            <li class="skill-tag">REST</li>
-            <li class="skill-tag">gRPC</li>
-            <li class="skill-tag">Alembic</li>
-            <li class="skill-tag">Render</li>
-          </ul>
+            <h3>AI/ML</h3>
+            <ul class="skill-list">
+                <li class="skill-tag">PyTorch</li>
+                <!-- <li class="skill-tag">Random Forest</li>
+                <li class="skill-tag">Decision Tree</li>
+                <li class="skill-tag">Linear Regression</li> -->
+                <li class="skill-tag">scikit-learn</li>
+                <li class="skill-tag">TensorFlow</li>
+                <!-- <li class="skill-tag">Anomaly Detection</li> -->
+            </ul>
         </div>
+
         <div class="skill-card">
-          <h3>Competitive Programming</h3>
-          <ul class="skill-list">
-            <li class="skill-tag">C++</li>
-            <li class="skill-tag">Algorithms</li>
-            <li class="skill-tag">Data Structures</li>
-            <li class="skill-tag">Codeforces</li>
-            <li class="skill-tag">ICPC</li>
-          </ul>
+            <h3>NLP & LLM</h3>
+            <ul class="skill-list">
+                <li class="skill-tag">RAG</li>
+                <li class="skill-tag">Prompt Engineering</li>
+                <li class="skill-tag">LLM APIs</li>
+                <li class="skill-tag">NLP</li>
+            </ul>
+        </div>
+
+        <div class="skill-card">
+            <h3>Backend & APIs</h3>
+            <ul class="skill-list">
+                <li class="skill-tag">FastAPI</li>
+                <li class="skill-tag">Flask</li>
+                <li class="skill-tag">REST</li>
+                <li class="skill-tag">Docker</li>
+            </ul>
+        </div>
+
+        <div class="skill-card">
+            <h3>Cloud & Deployment</h3>
+            <ul class="skill-list">
+                <li class="skill-tag">Microsoft Azure</li>
+                <li class="skill-tag">Railway</li>
+            </ul>
+        </div>
+
+        <div class="skill-card">
+            <h3>Competitive Programming</h3>
+            <ul class="skill-list">
+                <li class="skill-tag">C++</li>
+                <li class="skill-tag">Algorithms</li>
+                <li class="skill-tag">Data Structures</li>
+                <li class="skill-tag">ICPC</li>
+            </ul>
+        </div>
+
+        <div class="skill-card">
+            <h3>Others</h3>
+            <ul class="skill-list">
+                <li class="skill-tag">Leadership</li>
+                <li class="skill-tag">Time Management</li>
+                <li class="skill-tag">Communication</li>
+            </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- ==================== PROJECTS ==================== -->
   <section id="projects">
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <p class="section-subtitle">A selection of things I've built</p>
       <div class="projects-grid">
-        <div class="project-card featured">
-          <div class="project-header">
-            <h3 class="project-title">Qarena — AI Exam Intelligence</h3>
-            <span class="status-badge"><span class="pulse"></span> Live · Active Users</span>
-          </div>
-          <p class="project-desc">
-            Co-founded and built an AI-powered platform that predicts likely exam questions for Bangladesh's National University students. Validated 7–8.5/10 accuracy across Linear Algebra, Discrete Math, Digital Systems Design, and Corporate Law. Growing via word-of-mouth.
-          </p>
-          <div class="project-tech">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">LLM APIs</span>
-            <span class="skill-tag">FastAPI</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Supabase</span>
-            <span class="skill-tag">NLP</span>
-          </div>
-          <a href="https://qarena.me" target="_blank" rel="noopener" class="project-link">qarena.me</a>
-        </div>
         <div class="project-card">
-          <div class="project-header">
-            <h3 class="project-title">Enterprise ETL Pipeline</h3>
-          </div>
-          <p class="project-desc">
-            Production-grade data pipeline processing 10M+ rows. Freight cost prediction with regression models and anomaly detection on vendor invoices. Orchestration with Airflow, transformations with dbt.
-          </p>
-          <div class="project-tech">
-            <span class="skill-tag">Apache Airflow</span>
-            <span class="skill-tag">dbt</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Python</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-header">
-            <h3 class="project-title">DhakaFlow — Urban Transport Intelligence</h3>
-          </div>
-          <p class="project-desc">
-            Hackathon project at Impact Dhaka – AI for Urban Transformation. Informal transport intelligence concept for Dhaka's mixed-traffic environment combining real-time data signals with route optimization.
-          </p>
-          <div class="project-tech">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Data Analysis</span>
-            <span class="skill-tag">Geospatial</span>
-          </div>
+            <div class="project-header">
+                <h3 class="project-title">Qarena — AI Question Bank Intelligence</h3>
+                <span class="status-badge"><span class="pulse"></span> Live · Active Users</span>
+            </div>
+            <p class="project-desc">
+                Founded and built an AI-powered Questoin Bank that predicts likely exam questions for Bangladesh's National University students. Validated 7–8.5/10 accuracy across Linear Algebra, Discrete Math and Digital Systems Design, etc. Growing via word-of-mouth.
+            </p>
+            <div class="project-tech">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">LLM APIs</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <!-- <span class="skill-tag">Supabase</span> -->
+                <span class="skill-tag">NLP</span>
+            </div>
+            <a href="https://qarena.me" target="_blank" rel="noopener" class="project-link">qarena.me</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
+  <!-- ==================== EXPERIENCE ==================== -->
   <section id="experience" style="background: var(--surface);">
     <div class="container">
       <h2 class="section-title">Experience</h2>
@@ -786,20 +214,21 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>pcIST | President & AI/Data Science Instructor</h3>
+            <h3>pcIST | President & AI Instructor</h3>
             <div class="timeline-meta">2023 – Present</div>
             <ul class="timeline-list">
-              <li>Lead the Programming Club of IST — organizing national contests, workshops, and career seminars</li>
-              <li>Teach Data Science and AI curriculum to 100+ students</li>
-              <li>Built automated contest infrastructure including certificate generation pipelines</li>
-              <li>Organized "Pathways with Anis Khan" seminar (speaker: SRE at Trivago, Germany)</li>
+              <li>Lead the Programming Club of IST — organizing contests, workshops, and career seminars</li>
+              <li>Teach AI curriculum to 100+ students</li>
+      
+              <li>Organized "Pathways with Anis Khan" seminar featuring Anis Khan (SRE at Trivago, Germany)</li>
+              <li>Organized "AI Code Lab" seminar featuring Mohammad Mahdee Uz Zaman (Founder, Cloudcamp Bangladesh; Director, Professional Studies, Washington University of Science & Technology, USA) and Sumit Saha (Founder & CEO, Learn with Sumit; Co-Founder & Managing Director, Analyzen)</li>
             </ul>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>Qarena | Co-Founder & Lead Engineer</h3>
+            <h3>Qarena | Founder</h3>
             <div class="timeline-meta">2024 – Present</div>
             <ul class="timeline-list">
               <li>Architected and built the full-stack platform — backend API, ML prediction engine, web and mobile apps</li>
@@ -812,8 +241,9 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h3>ICPC | Competitive Programmer — Asia Dhaka Regional</h3>
-            <div class="timeline-meta">2023 & 2025 skeptical <ul class="timeline-list">
-              <li>Represented IST at ICPC Asia Dhaka Regional twice </li>
+            <div class="timeline-meta">2023 & 2025</div>
+            <ul class="timeline-list">
+              <li>Represented IST at ICPC Asia Dhaka Regional twice</li>
               <li>Active on Codeforces (handle: Sazzad_)</li>
             </ul>
           </div>
@@ -822,16 +252,16 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- ==================== CONTACT ==================== -->
   <section id="contact" class="contact-section">
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
       <p class="section-subtitle">
-        I'm open to Data Engineering, ML Engineering, and AI Engineering roles. If you're building something interesting or hiring, reach out.
+        I'm open to ML Engineering, and AI Engineering roles. If you're building something interesting or hiring, reach out.
       </p>
       <div class="contact-links">
         <a href="https://wa.me/8801712796362" target="_blank" rel="noopener" class="contact-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.52-1.52a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.52-1.52a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 2 2z"/></svg>
           WhatsApp
         </a>
         <a href="mailto:m.sazzad.h3@gmail.com" class="contact-link">
@@ -843,75 +273,26 @@
           LinkedIn
         </a>
         <a href="https://codeforces.com/profile/Sazzad_" target="_blank" rel="noopener" class="contact-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17өр16"/><circle cx="12" cy="12" r="5"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16"/><circle cx="12" cy="12" r="5"/></svg>
           Codeforces
         </a>
         <a href="https://qarena.me" target="_blank" rel="noopener" class="contact-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/aperid="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           Qarena
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="container">
-      <p>Built by Md Sazzad Hossain · Dhaka, Bangladesh · 2025</p>
+      <p>Built by Md Sazzad Hossain · Dhaka, Bangladesh · 2026</p>
     </div>
   </footer>
 
-  <script>
-    // Typed role switcher
-    const roles = [
-      "Data Engineer",
-      "ML Engineer",
-      "AI Builder",
-      "Competitive Programmer",
-      "Founder @ Qarena"
-    ];
-
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 100;
-    const typedElement = document.getElementById('typed-role');
-
-    function typeRole() {
-      const currentRole = roles[roleIndex];
-
-      if (isDeleting) {
-        typedElement.textContent = currentRole.substring(0, charIndex - 1);
-        charIndex--;
-        typingSpeed = 40;
-      } else {
-        typedElement.textContent = currentRole.substring(0, charIndex + 1);
-        charIndex++;
-        typingSpeed = 100;
-      }
-
-      if (!isDeleting && charIndex === currentRole.length) {
-        isDeleting = true;
-        typingSpeed = 2000;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-        typingSpeed = 500;
-      }
-
-      setTimeout(typeRole, typingSpeed);
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      typedElement.textContent = '';
-      setTimeout(typeRole, 500);
-    });
-
-    // Mobile menu toggle
-    function toggleMobileMenu() {
-      document.getElementById('mobileNav').classList.toggle('active');
-    }
-  </script>
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="main.js"></script>
 
 </body>
 </html>
